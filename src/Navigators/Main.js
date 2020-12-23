@@ -1,16 +1,12 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { IndexExampleContainer } from '@/Containers'
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import IndexExampleContainer from "@/Containers/Example/Index";
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 
 // @refresh reset
 const MainNavigator = () => {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={IndexExampleContainer} />
-    </Tab.Navigator>
-  )
-}
+  return <IndexExampleContainer />;
+};
 
-export default MainNavigator
+export default MainNavigator;
