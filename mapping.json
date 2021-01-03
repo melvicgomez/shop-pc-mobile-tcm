@@ -1,0 +1,11 @@
+{
+  "strict": {
+    "text-font-family": "ProximaNova-Regular",
+    "text-heading-1-font-family": "ProximaNova-Bold",
+    "text-heading-2-font-family": "ProximaNova-Bold",
+    "text-heading-3-font-family": "ProximaNova-Bold",
+    "text-heading-4-font-family": "ProximaNova-Bold",
+    "text-heading-5-font-family": "ProximaNova-Bold",
+    "text-heading-6-font-family": "ProximaNova-Bold"
+  }
+}

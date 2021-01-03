@@ -1,35 +1,35 @@
-import { useColorScheme } from 'react-native-appearance'
-import { useSelector } from 'react-redux'
-import { DarkTheme, DefaultTheme } from '@react-navigation/native'
-import Fonts from '@/Theme/Fonts'
-import Gutters from '@/Theme/Gutters'
-import Images from '@/Theme/Images'
-import Layout from '@/Theme/Layout'
-import Common from '@/Theme/Common'
-import * as DefaultVariables from '@/Theme/Variables'
-import themes from '@/Theme/themes'
+import { useColorScheme } from 'react-native-appearance';
+import { useSelector } from 'react-redux';
+import { DarkTheme, DefaultTheme } from '@react-navigation/native';
+import Fonts from '@/Theme/Fonts';
+import Gutters from '@/Theme/Gutters';
+import Images from '@/Theme/Images';
+import Layout from '@/Theme/Layout';
+import Common from '@/Theme/Common';
+import * as DefaultVariables from '@/Theme/Variables';
+import themes from '@/Theme/themes';
 
 export default function () {
   // Get the scheme device
-  const colorScheme = useColorScheme()
+  const colorScheme = useColorScheme();
 
   // Get current theme from the store
-  const currentTheme = useSelector((state) => state.theme.theme || 'default')
-  const isDark = useSelector((state) => state.theme.darkMode)
-  const darkMode = isDark === null ? colorScheme === 'dark' : isDark
+  const currentTheme = useSelector((state) => state.theme.theme || 'default');
+  const isDark = useSelector((state) => state.theme.darkMode);
+  const darkMode = isDark === null ? colorScheme === 'dark' : isDark;
   //Select the right theme light theme ({} if not exist)
   const { Variables: themeConfigVars = {}, ...themeConfig } =
-    themes[currentTheme] || {}
+    themes[currentTheme] || {};
 
   const { Variables: darkThemeConfigVars = {}, ...darkThemeConfig } = darkMode
     ? themes[`${currentTheme}_dark`] || {}
-    : {}
+    : {};
 
   const themeVariables = mergeVariables(
     DefaultVariables,
     themeConfigVars,
     darkThemeConfigVars,
-  )
+  );
 
   // Build the default theme
   const baseTheme = {
@@ -39,7 +39,7 @@ export default function () {
     Images: Images(themeVariables),
     Layout: Layout(themeVariables),
     ...themeVariables,
-  }
+  };
 
   // Merge and return the current Theme
   return buildTheme(
@@ -47,7 +47,7 @@ export default function () {
     baseTheme,
     formatTheme(themeVariables, themeConfig || {}),
     formatTheme(themeVariables, darkThemeConfig || {}),
-  )
+  );
 }
 
 /**
@@ -62,9 +62,9 @@ const formatTheme = (variables, theme) => {
     return {
       ...acc,
       [name]: generate(variables),
-    }
-  }, {})
-}
+    };
+  }, {});
+};
 
 /**
  * Merge all variables for building the theme
@@ -84,8 +84,8 @@ const mergeVariables = (variables, themeConfig, darkThemeConfig) =>
         ...(themeConfig[group] || {}),
         ...(darkThemeConfig[group] || {}),
       },
-    }
-  }, {})
+    };
+  }, {});
 
 /**
  * Provide all the theme exposed with useTheme()
@@ -104,8 +104,8 @@ const buildTheme = (darkMode, baseTheme, themeConfig, darkThemeConfig) => {
       darkMode ? DarkTheme : DefaultTheme,
       baseTheme.NavigationColors,
     ),
-  }
-}
+  };
+};
 
 /**
  * Merge theme from baseTheme <- currentTheme <- currentDarkTheme
@@ -127,7 +127,7 @@ const mergeTheme = (baseTheme, theme, darkTheme) => ({
     }),
     {},
   ),
-})
+});
 
 /**
  * Merge the React Navigation Theme
@@ -142,4 +142,4 @@ const mergeNavigationTheme = (reactNavigationTheme, overrideColors) => ({
     ...reactNavigationTheme.colors,
     ...overrideColors,
   },
-})
+});
