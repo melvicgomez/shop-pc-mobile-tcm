@@ -1,7 +1,7 @@
 /**
  * This file contains all application's style relative to fonts
  */
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 /**
  *
@@ -49,5 +49,5 @@ export default function ({ FontSize, Colors }) {
     textRight: {
       textAlign: 'right',
     },
-  })
+  });
 }

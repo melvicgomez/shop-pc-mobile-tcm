@@ -20,6 +20,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		833F2006FE004CFBA319C9F2 /* libPods-ShopPCMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE8F60935CC7F1EA8FB7E0E /* libPods-ShopPCMobile.a */; };
 		F98E0BA87E9A7377883D6CF3 /* libPods-ShopPCMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF2B387AECB3EB857C4592D /* libPods-ShopPCMobile-tvOS.a */; };
+		3213EA83E24B41458B32455E /* ProximaNova-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C637EB9386418C973B27B2 /* ProximaNova-Regular.ttf */; };
+		D08704DB03D44D719E9A2529 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 112E1453821744F5873CD567 /* ProximaNova-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		EB7CAF265D0869C1A140D967 /* Pods-ShopPCMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopPCMobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ShopPCMobile-tvOSTests/Pods-ShopPCMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		E3C637EB9386418C973B27B2 /* ProximaNova-Regular.ttf */ = {isa = PBXFileReference; name = "ProximaNova-Regular.ttf"; path = "../assets/ProximaNova-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		112E1453821744F5873CD567 /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; name = "ProximaNova-Bold.ttf"; path = "../assets/ProximaNova-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				18A06528071B6FFBBA9372E2 /* Pods */,
+				FBE3C67DA8B643F09E9E87FC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +202,16 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		FBE3C67DA8B643F09E9E87FC /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E3C637EB9386418C973B27B2 /* ProximaNova-Regular.ttf */,
+				112E1453821744F5873CD567 /* ProximaNova-Bold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +357,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3213EA83E24B41458B32455E /* ProximaNova-Regular.ttf in Resources */,
+				D08704DB03D44D719E9A2529 /* ProximaNova-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

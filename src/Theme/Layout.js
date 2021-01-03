@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 /**
  *
@@ -81,6 +81,9 @@ export default function () {
     selfStretch: {
       alignSelf: 'stretch',
     },
+    selfCenter: {
+      alignSelf: 'center',
+    },
     /* Sizes Layouts */
     fill: {
       flex: 1,
@@ -105,5 +108,5 @@ export default function () {
     rotate90Inverse: {
       transform: [{ rotate: '-90deg' }],
     },
-  })
+  });
 }

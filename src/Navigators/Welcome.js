@@ -1,5 +1,5 @@
-import React from "react";
-import { IndexWelcomeContainer } from "@/Containers";
+import React from 'react';
+import { IndexWelcomeContainer } from '@/Containers';
 
 // @refresh reset
 const WelcomeNavigator = () => {
